@@ -18,6 +18,7 @@ package activity2;
  */
 public class Magpie2
 {
+    
 	/**
 	 * Get a default greeting 	
 	 * @return a greeting
@@ -26,7 +27,9 @@ public class Magpie2
 	{
 		return "Hello, let's talk.";
 	}
+        
 	
+        
 	/**
 	 * Gives a response to a user statement
 	 * 
@@ -36,11 +39,36 @@ public class Magpie2
 	 */
 	public String getResponse(String statement)
 	{
+                //statement.trim();
 		String response = "";
 		if (statement.indexOf("no") >= 0)
 		{
 			response = "Why so negative?";
 		}
+                if (statement.indexOf("") >= 0)
+		{
+			response = "Please say something?";
+		}
+                if (statement.indexOf("coin") >= 0)
+		{
+			response = "Eddie uses coins on his tests";
+		}
+                if (statement.indexOf("man") >= 0)
+		{
+			response = "I’m no mere man. I am the knight; I am darkness; I AM BATMAN";
+		}
+                if (statement.indexOf("chad") >= 0)
+		{
+			response = "I’ve heard Chad has glorious thighs!";
+		}
+                if (statement.indexOf("tholking") >= 0 ||statement.indexOf("Tholking") >= 0)
+		{
+			response = "I've heard he is a great teacher.";
+		}
+                if(statement.indexOf("cat")>=0 || statement.indexOf("dog")>=0)
+                {
+                    response = "Tell me more about your pets";
+                }
 		else if (statement.indexOf("mother") >= 0
 				|| statement.indexOf("father") >= 0
 				|| statement.indexOf("sister") >= 0
@@ -54,7 +82,7 @@ public class Magpie2
 		}
 		return response;
 	}
-
+        
 	/**
 	 * Pick a default response to use if nothing else fits.
 	 * @return a non-committal string
@@ -80,7 +108,19 @@ public class Magpie2
 		}
 		else if (whichResponse == 3)
 		{
-			response = "You don't say.";
+			response = "I'M BATMAN";
+		}
+                else if (whichResponse == 4)
+		{
+			response = "I am one of the Knights Who Say NE";
+		}
+                else if (whichResponse == 5)
+		{
+			response = "Thank you for flying American Airlines. Be sure to grab your complimentary CHADSTHIGHS as you deboard the plane. Thank you!";
+		}
+                else if (whichResponse == 6)
+		{
+			response = "Ian Fitzgerald got accepted to Huntsman at UPenn!";
 		}
 
 		return response;
